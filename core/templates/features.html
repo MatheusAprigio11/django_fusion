@@ -9,33 +9,19 @@
       <div class="row">
         <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
           <div class="content-left">
+            
+            {% for fe in features|slice:":3" %}
             <div class="box-item wow fadeInLeft" data-wow-delay="0.3s">
               <span class="icon">
-                <i class="lni-rocket"></i>
+                <i class="{{ fe.icone }}"></i>
               </span>
               <div class="text">
-                <h4>Bootstrap 4 Based</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <h4>{{ fe.feature_name }}</h4>
+                <p>{{ fe.descricao }}</p>
               </div>
             </div>
-            <div class="box-item wow fadeInLeft" data-wow-delay="0.6s">
-              <span class="icon">
-                <i class="lni-laptop-phone"></i>
-              </span>
-              <div class="text">
-                <h4>Fully Responsive</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-              </div>
-            </div>
-            <div class="box-item wow fadeInLeft" data-wow-delay="0.9s">
-              <span class="icon">
-                <i class="lni-cog"></i>
-              </span>
-              <div class="text">
-                <h4>HTML5, CSS3 & SASS</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-              </div>
-            </div>
+            {% endfor %}
+
           </div>
         </div>
         <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
@@ -43,35 +29,20 @@
             <img src="{% static 'img/feature/intro-mobile.png' %}" alt="">
           </div>
         </div>
+        
         <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
           <div class="content-right">
+            {% for lastfe in features|slice:"3:" %}
             <div class="box-item wow fadeInRight" data-wow-delay="0.3s">
               <span class="icon">
-                <i class="lni-leaf"></i>
+                <i class="{{ lastfe.icone }}"></i>
               </span>
               <div class="text">
-                <h4>Modern Design</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                <h4>{{ lastfe.feature_name }}</h4>
+                <p>{{ lastfe.descricao }}</p>
               </div>
             </div>
-            <div class="box-item wow fadeInRight" data-wow-delay="0.6s">
-              <span class="icon">
-                <i class="lni-layers"></i>
-              </span>
-              <div class="text">
-                <h4>Multi-purpose Template</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-              </div>
-            </div>
-            <div class="box-item wow fadeInRight" data-wow-delay="0.9s">
-              <span class="icon">
-                <i class="lni-leaf"></i>
-              </span>
-              <div class="text">
-                <h4>Working Contact Form</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-              </div>
-            </div>
+            {% endfor %}
           </div>
         </div>
       </div>
